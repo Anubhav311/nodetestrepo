@@ -14,8 +14,13 @@ app.get("/", function(req, res) {
 const add = (a, b) => {
     return a + b;
 };
+const config = {
+    coverageReporters: ["clover", "json", "lcov", ["text", { skipFull: true }]],
+};
+
 module.exports = {
     add,
+    config,
 };
 
 // app.listen(port, () => {
